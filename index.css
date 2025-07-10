@@ -1,0 +1,182 @@
+:root {
+  --primary: #ff5722;           /* naranja vibrante */
+  --primary-dark: #e64a19;      /* naranja oscuro */
+  --background: #121212;        /* fondo gris muy oscuro */
+  --card-bg: #1e1e1e;           /* fondo tarjetas */
+  --text: #ffffff;
+  --text-muted: #bbbbbb;
+
+  --btn-primary-bg: var(--primary);
+  --btn-primary-color: #fff;
+  --btn-outline-bg: transparent;
+  --btn-outline-color: var(--primary);
+  --btn-outline-border: var(--primary);
+  --btn-outline-hover-bg: var(--primary-dark);
+  --btn-outline-hover-color: #fff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  border-bottom: 3px solid #0f0f10;
+  padding-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255, 87, 34, 0.4);
+}
+
+.d-flex {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 100px;
+  user-select: none;
+}
+
+/* Botones primarios (pestaña activa) */
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  border-color: transparent;
+  box-shadow: 0 4px 8px rgba(255, 87, 34, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+.btn-primary:hover {
+  box-shadow: 0 6px 12px rgba(230, 74, 25, 0.7);
+}
+
+/* Botones outline (pestañas inactivas) */
+.btn-outline-primary {
+  background-color: var(--btn-outline-bg);
+  color: var(--btn-outline-color);
+  border: 2px solid var(--btn-outline-border);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-outline-primary:hover {
+  background-color: var(--btn-outline-hover-bg);
+  color: var(--btn-outline-hover-color);
+  border-color: var(--btn-outline-hover-bg);
+}
+
+/* Contenedor de los componentes */
+div > div {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Adaptaciones responsive */
+@media (max-width: 600px) {
+  .d-flex {
+    justify-content: center;
+  }
+  button {
+    min-width: 80px;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 233px; /* Igual que tu inline */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content-edit {
+  background-color: white;       /* ✅ usa background-color en CSS */
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: black;                  /* Si querés texto negro */
+}
+
+
+body {
+  background-color: #000000;
+}
+
+/* Fondo oscuro detrás del modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 233;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Panel flotante para crear / editar */
+.modal-content-form {
+  background-color: #ffffff;   /* fondo blanco */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Fondo oscuro detrás del modal flotante */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 233;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Panel blanco centrado */
+.modal-content-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 650px;
+  width: 90%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
